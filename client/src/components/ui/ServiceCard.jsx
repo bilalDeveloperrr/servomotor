@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Reveal from "./Reveal";
+import { slugToImageCategory, getImageAt } from "../../data/images";
 
 function ServiceCard({ service, index }) {
   const Icon = service.icon;
+  const categoryKey = slugToImageCategory[service.slug];
+  const image = categoryKey ? getImageAt(categoryKey, 1) : null;
 
   return (
     <Reveal delay={(index % 4) * 0.08} className="h-full">
@@ -12,9 +15,18 @@ function ServiceCard({ service, index }) {
         className="group flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-primary-200 hover:shadow-[0_20px_45px_-18px_rgba(15,23,42,0.22)]"
       >
         <div className="relative flex h-36 items-center justify-center overflow-hidden bg-navy-900">
-          <div className="absolute inset-0 bg-blueprint-dark opacity-40" />
+          {image && (
+            <img
+              src={image.src}
+              alt={image.alt}
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
+            />
+          )}
+          <div className={`absolute inset-0 bg-blueprint-dark ${image ? "opacity-20" : "opacity-40"}`} />
+          {image && <div className="absolute inset-0 bg-navy-950/45" />}
           <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-primary-600/25 blur-2xl transition-all duration-300 group-hover:bg-primary-500/40" />
-          <span className="relative flex h-16 w-16 items-center justify-center rounded-xl border border-primary-400/25 bg-primary-500/10 transition-transform duration-300 group-hover:scale-110">
+          <span className="relative flex h-16 w-16 items-center justify-center rounded-xl border border-primary-400/25 bg-primary-500/10 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
             <Icon className="h-8 w-8 text-primary-300" strokeWidth={1.75} />
           </span>
         </div>

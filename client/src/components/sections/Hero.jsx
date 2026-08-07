@@ -80,7 +80,7 @@ function Hero() {
         </div>
       </Container>
 
-      <Container className="absolute inset-x-0 -bottom-16 sm:-bottom-14">
+      {/* <Container className="absolute inset-x-0 -bottom-16 sm:-bottom-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -99,7 +99,7 @@ function Hero() {
             </div>
           ))}
         </motion.div>
-      </Container>
+      </Container> */}
     </section>
   );
 }

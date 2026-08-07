@@ -33,11 +33,6 @@ export const coilRewindingData = {
     "Custom coil assemblies to specification",
   ],
   industriesSlugs: ["power-plants", "steel-plants", "paper-mills", "manufacturing"],
-  gallery: [
-    { title: "Generator Coil Rewinding", icon: Layers, tag: "Before / After", category: "Coil Rewinding" },
-    { title: "Pump Motor Coil Rewinding", icon: Cable, tag: "Before / After", category: "Coil Rewinding" },
-    { title: "Coil Winding & Impregnation Bay", icon: Droplet, tag: "Facility", category: "Workshop" },
-  ],
   faqs: [
     {
       question: "Can you build a coil if I don't have a replacement part number?",

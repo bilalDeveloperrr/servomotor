@@ -1,114 +1,22 @@
-import { Settings, Zap, Gauge, Cog, Layers, Factory, TestTube2, Activity } from "lucide-react";
+import { images } from "./images";
 
-export const galleryCategories = [
-  "All",
-  "Workshop",
-  "Servo Motors",
-  "Transformers",
-  "Coil Rewinding",
-  "CNC Spindle Repair",
-  "Motor Repairs",
-  "Testing Laboratory",
-  "Before & After",
+const categoryKeys = [
+  "servoMotor",
+  "motorRewinding",
+  "industrialMotorRepair",
+  "spindleMotorRepair",
+  "coilRewinding",
+  "transformerRepair",
 ];
 
-export const galleryItems = [
-  {
-    title: "AC Servo Motor Overhaul",
-    icon: Settings,
-    tag: "Before / After",
-    category: "Servo Motors",
-    filterTags: ["Servo Motors", "Before & After"],
-  },
-  {
-    title: "Encoder & Bearing Replacement",
-    icon: Settings,
-    tag: "Before / After",
-    category: "Servo Motors",
-    filterTags: ["Servo Motors", "Before & After"],
-  },
-  {
-    title: "Dry-Type Transformer Rewind",
-    icon: Zap,
-    tag: "Before / After",
-    category: "Transformers",
-    filterTags: ["Transformers", "Before & After"],
-  },
-  {
-    title: "Oil-Filled Transformer Overhaul",
-    icon: Zap,
-    tag: "Before / After",
-    category: "Transformers",
-    filterTags: ["Transformers", "Before & After"],
-  },
-  {
-    title: "CNC Spindle Precision Rebuild",
-    icon: Gauge,
-    tag: "Before / After",
-    category: "CNC Spindle Repair",
-    filterTags: ["CNC Spindle Repair", "Before & After"],
-  },
-  {
-    title: "High-Speed Spindle Balancing",
-    icon: Gauge,
-    tag: "Before / After",
-    category: "CNC Spindle Repair",
-    filterTags: ["CNC Spindle Repair", "Before & After"],
-  },
-  {
-    title: "Induction Motor Restoration",
-    icon: Cog,
-    tag: "Before / After",
-    category: "Motor Repairs",
-    filterTags: ["Motor Repairs", "Before & After"],
-  },
-  {
-    title: "Brake Motor Rewind",
-    icon: Cog,
-    tag: "Before / After",
-    category: "Motor Repairs",
-    filterTags: ["Motor Repairs", "Before & After"],
-  },
-  {
-    title: "Generator Coil Rewinding",
-    icon: Layers,
-    tag: "Before / After",
-    category: "Coil Rewinding",
-    filterTags: ["Coil Rewinding", "Before & After"],
-  },
-  {
-    title: "Pump Motor Coil Rewinding",
-    icon: Layers,
-    tag: "Before / After",
-    category: "Coil Rewinding",
-    filterTags: ["Coil Rewinding", "Before & After"],
-  },
-  {
-    title: "Precision Rewinding Bay",
-    icon: Factory,
-    tag: "Facility",
-    category: "Workshop",
-    filterTags: ["Workshop"],
-  },
-  {
-    title: "CNC Balancing Station",
-    icon: Gauge,
-    tag: "Facility",
-    category: "Workshop",
-    filterTags: ["Workshop"],
-  },
-  {
-    title: "Load & Insulation Test Cell",
-    icon: TestTube2,
-    tag: "Facility",
-    category: "Testing Laboratory",
-    filterTags: ["Testing Laboratory"],
-  },
-  {
-    title: "Vibration Analysis Lab",
-    icon: Activity,
-    tag: "Facility",
-    category: "Testing Laboratory",
-    filterTags: ["Testing Laboratory"],
-  },
-];
+export const galleryCategories = ["All", ...categoryKeys.map((key) => images[key].label)];
+
+export const galleryItems = categoryKeys.flatMap((key) => {
+  const category = images[key];
+  return category.all.map((image) => ({
+    title: image.alt,
+    image,
+    category: category.label,
+    filterTags: [category.label],
+  }));
+});

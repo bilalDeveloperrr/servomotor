@@ -33,11 +33,6 @@ export const servoMotorRepairData = {
     "DC servo motors (all frame sizes)",
   ],
   industriesSlugs: ["automation", "packaging", "automotive", "manufacturing"],
-  gallery: [
-    { title: "AC Servo Motor Overhaul", icon: Settings, tag: "Before / After", category: "Servo Motors" },
-    { title: "Encoder & Bearing Replacement", icon: ScanLine, tag: "Before / After", category: "Servo Motors" },
-    { title: "Servo Drive Calibration Bay", icon: Radar, tag: "Facility", category: "Workshop" },
-  ],
   faqs: [
     {
       question: "Which servo motor brands do you service?",

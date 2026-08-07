@@ -1,10 +1,21 @@
 import { motion } from "framer-motion";
 import Container from "./Container";
 
-function PageHero({ eyebrow, title, description, icon: Icon, children }) {
+function PageHero({ eyebrow, title, description, icon: Icon, image, children }) {
   return (
     <section className="relative overflow-hidden bg-navy-950 py-20 sm:py-24">
-      <div className="absolute inset-0 bg-blueprint-dark opacity-60" />
+      {image && (
+        <img
+          src={image.src}
+          alt={image.alt}
+          loading="lazy"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+      )}
+      <div
+        className={`absolute inset-0 bg-blueprint-dark ${image ? "opacity-25" : "opacity-60"}`}
+      />
+      {image && <div className="absolute inset-0 bg-navy-950/80" />}
       <div className="pointer-events-none absolute -left-40 top-10 h-96 w-96 rounded-full bg-primary-600/20 blur-[120px]" />
       <div className="pointer-events-none absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-primary-500/10 blur-[120px]" />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/40" />
