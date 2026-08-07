@@ -33,11 +33,6 @@ export const industrialMotorRepairData = {
     "Motors from fractional HP to heavy industrial ratings",
   ],
   industriesSlugs: ["manufacturing", "steel-plants", "cement", "mining"],
-  gallery: [
-    { title: "Induction Motor Restoration", icon: Cog, tag: "Before / After", category: "Motor Repairs" },
-    { title: "Brake Motor Rewind", icon: Settings, tag: "Before / After", category: "Motor Repairs" },
-    { title: "Geared Motor Overhaul Bay", icon: Wrench, tag: "Facility", category: "Workshop" },
-  ],
   faqs: [
     {
       question: "Which motor brands and types do you repair?",

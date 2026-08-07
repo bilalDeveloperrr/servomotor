@@ -33,11 +33,6 @@ export const transformerRepairData = {
     "Control and instrument transformers",
   ],
   industriesSlugs: ["power-plants", "steel-plants", "cement", "manufacturing"],
-  gallery: [
-    { title: "Dry-Type Transformer Rewind", icon: Zap, tag: "Before / After", category: "Transformers" },
-    { title: "Oil-Filled Transformer Overhaul", icon: Droplet, tag: "Before / After", category: "Transformers" },
-    { title: "Load & Insulation Test Cell", icon: TestTube2, tag: "Facility", category: "Testing Laboratory" },
-  ],
   faqs: [
     {
       question: "Do you repair both oil-filled and dry-type transformers?",

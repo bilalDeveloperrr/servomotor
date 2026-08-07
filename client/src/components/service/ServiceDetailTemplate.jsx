@@ -12,9 +12,14 @@ import ContactForm from "../ui/ContactForm";
 import FAQSection from "../sections/FAQSection";
 import CTASection from "../sections/CTASection";
 import { industries } from "../../data/industries";
+import { getImageCategoryForSlug } from "../../data/images";
 
 function ServiceDetailTemplate({ data }) {
   const servedIndustries = industries.filter((industry) => data.industriesSlugs.includes(industry.slug));
+  const imageCategory = getImageCategoryForSlug(data.slug);
+  const galleryItems = imageCategory
+    ? imageCategory.all.map((image) => ({ image, title: image.alt, category: imageCategory.label }))
+    : data.gallery;
 
   return (
     <>
@@ -23,7 +28,13 @@ function ServiceDetailTemplate({ data }) {
         description={data.overviewParagraphs[0]}
       />
 
-      <PageHero icon={data.icon} eyebrow="Our Services" title={data.title} description={data.tagline} />
+      <PageHero
+        icon={data.icon}
+        eyebrow="Our Services"
+        title={data.title}
+        description={data.tagline}
+        image={imageCategory?.hero}
+      />
 
       <section className="bg-white py-24 sm:py-28">
         <Container>
@@ -118,7 +129,7 @@ function ServiceDetailTemplate({ data }) {
             description={`Completed ${data.title.toLowerCase()} projects from our workshop.`}
           />
           <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {data.gallery.map((item, index) => (
+            {galleryItems.map((item, index) => (
               <BeforeAfterCard key={item.title} item={item} delay={(index % 3) * 0.08} />
             ))}
           </div>

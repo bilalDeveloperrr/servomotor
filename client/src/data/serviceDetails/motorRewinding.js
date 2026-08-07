@@ -33,11 +33,6 @@ export const motorRewindingData = {
     "Motors up to large industrial HP ratings",
   ],
   industriesSlugs: ["textile", "paper-mills", "steel-plants", "manufacturing"],
-  gallery: [
-    { title: "Stator Rewind — Induction Motor", icon: CircuitBoard, tag: "Before / After", category: "Motor Repairs" },
-    { title: "Rotor Rebalancing", icon: Scale, tag: "Before / After", category: "Motor Repairs" },
-    { title: "VPI Insulation Treatment Bay", icon: Droplet, tag: "Facility", category: "Workshop" },
-  ],
   faqs: [
     {
       question: "What insulation class do you use for rewinding?",

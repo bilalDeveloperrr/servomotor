@@ -33,11 +33,6 @@ export const spindleMotorRepairData = {
     "Spindle motors with integrated encoders",
   ],
   industriesSlugs: ["automotive", "manufacturing", "packaging", "automation"],
-  gallery: [
-    { title: "CNC Spindle Precision Rebuild", icon: Gauge, tag: "Before / After", category: "CNC Spindle Repair" },
-    { title: "High-Speed Spindle Balancing", icon: Scale, tag: "Before / After", category: "CNC Spindle Repair" },
-    { title: "CNC Balancing Station", icon: Radar, tag: "Facility", category: "Workshop" },
-  ],
   faqs: [
     {
       question: "What RPM range of spindles can you service?",

@@ -28,11 +28,24 @@ function BeforeAfterVisual({ Icon, tag }) {
   );
 }
 
+function BeforeAfterPhoto({ image }) {
+  return (
+    <div className="relative h-48 overflow-hidden">
+      <img
+        src={image.src}
+        alt={image.alt}
+        loading="lazy"
+        className="h-full w-full rounded-t-xl object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+    </div>
+  );
+}
+
 function BeforeAfterCard({ item, delay = 0 }) {
   return (
     <Reveal delay={delay}>
       <div className="group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_-18px_rgba(15,23,42,0.22)]">
-        <BeforeAfterVisual Icon={item.icon} tag={item.tag} />
+        {item.image ? <BeforeAfterPhoto image={item.image} /> : <BeforeAfterVisual Icon={item.icon} tag={item.tag} />}
         <div className="p-5">
           <span className="text-xs font-semibold uppercase tracking-wider text-primary-600">{item.category}</span>
           <h3 className="mt-1.5 text-base font-bold text-navy-900">{item.title}</h3>
