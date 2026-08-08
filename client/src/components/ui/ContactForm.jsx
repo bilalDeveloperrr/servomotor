@@ -135,7 +135,7 @@ function ContactForm({ defaultService = "", className = "" }) {
         <div className="sm:col-span-2">
           <button
             type="submit"
-            className="group inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary-600 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_24px_-8px_rgba(11,95,255,0.55)] transition-colors hover:bg-primary-700 sm:w-auto"
+            className="group inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary-600 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_24px_-8px_rgba(180,83,9,0.45)] transition-colors hover:bg-primary-700 sm:w-auto"
           >
             Submit Inquiry
             <Send className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />

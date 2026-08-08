@@ -1,16 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { PhoneCall, ShieldCheck, Gauge, BadgeCheck } from "lucide-react";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
-import heroForLanding from "../../assets/hero_for_landing.jpg";
-
-const heroStats = [
-  { icon: ShieldCheck, value: "20+", label: "Years Experience" },
-  { icon: Gauge, value: "5000+", label: "Repairs Completed" },
-  { icon: PhoneCall, value: "24/7", label: "Emergency Support" },
-  { icon: BadgeCheck, value: "ISO", label: "Quality Standards" },
-];
+import heroForLanding from "../../assets/servo_motor/servo_07.jpg";
 
 function Hero() {
   return (

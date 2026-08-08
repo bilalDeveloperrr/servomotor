@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 const variants = {
   primary:
-    "bg-primary-600 text-white hover:bg-primary-700 shadow-[0_10px_24px_-8px_rgba(11,95,255,0.55)] focus-visible:outline-primary-600",
+    "bg-primary-600 text-white hover:bg-primary-700 shadow-[0_10px_24px_-8px_rgba(180,83,9,0.45)] focus-visible:outline-primary-600",
   dark:
     "bg-navy-900 text-white hover:bg-navy-800 shadow-[0_10px_24px_-8px_rgba(15,23,42,0.45)] focus-visible:outline-navy-900",
   outline:

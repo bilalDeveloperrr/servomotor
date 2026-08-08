@@ -25,7 +25,7 @@ function YearsBadge() {
 
 function About() {
   return (
-    <section className="relative bg-white pb-24 pt-32 sm:pb-28 sm:pt-36 lg:pt-32">
+    <section className="relative bg-white pb-24 pt-15 sm:pb-15 sm:pt-13 lg:pt-18">
       <Container>
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-16">
           <Reveal direction="right" className="relative">
