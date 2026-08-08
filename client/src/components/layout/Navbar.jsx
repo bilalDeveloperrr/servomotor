@@ -33,24 +33,24 @@ function Navbar() {
 
   return (
     <div id="top">
-      <div className="hidden bg-navy-900 text-slate-300 lg:block">
+      <div className="hidden border-b border-slate-200 bg-surface text-slate-600 lg:block">
         <div className="mx-auto flex max-w-[1280px] items-center justify-between px-10 py-2 text-xs">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1.5">
-              <Phone className="h-3.5 w-3.5 text-primary-400" strokeWidth={2.25} />
+              <Phone className="h-3.5 w-3.5 text-primary-600" strokeWidth={2.25} />
               {company.phone}
             </span>
             <span className="flex items-center gap-1.5">
-              <Mail className="h-3.5 w-3.5 text-primary-400" strokeWidth={2.25} />
+              <Mail className="h-3.5 w-3.5 text-primary-600" strokeWidth={2.25} />
               {company.email}
             </span>
             <span className="flex items-center gap-1.5">
-              <Clock className="h-3.5 w-3.5 text-primary-400" strokeWidth={2.25} />
+              <Clock className="h-3.5 w-3.5 text-primary-600" strokeWidth={2.25} />
               {company.hours}
             </span>
           </div>
-          <span className="flex items-center gap-1.5 font-semibold text-white">
-            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
+          <span className="flex items-center gap-1.5 font-semibold text-navy-800">
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500" />
             24/7 Emergency Breakdown Support
           </span>
         </div>

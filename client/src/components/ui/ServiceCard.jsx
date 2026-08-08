@@ -14,20 +14,32 @@ function ServiceCard({ service, index }) {
         to={`/services/${service.slug}`}
         className="group flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-primary-200 hover:shadow-[0_20px_45px_-18px_rgba(15,23,42,0.22)]"
       >
-        <div className="relative flex h-36 items-center justify-center overflow-hidden bg-navy-900">
+        <div
+          className={`relative flex h-36 items-center justify-center overflow-hidden ${
+            image ? "bg-navy-900" : "bg-gradient-to-br from-primary-50 to-surface-alt"
+          }`}
+        >
           {image && (
             <img
               src={image.src}
               alt={image.alt}
               loading="lazy"
-              className="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
+              className="absolute inset-0 h-full w-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105"
             />
           )}
-          <div className={`absolute inset-0 bg-blueprint-dark ${image ? "opacity-20" : "opacity-40"}`} />
-          {image && <div className="absolute inset-0 bg-navy-950/45" />}
-          <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-primary-600/25 blur-2xl transition-all duration-300 group-hover:bg-primary-500/40" />
-          <span className="relative flex h-16 w-16 items-center justify-center rounded-xl border border-primary-400/25 bg-primary-500/10 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
-            <Icon className="h-8 w-8 text-primary-300" strokeWidth={1.75} />
+          <div className={`absolute inset-0 ${image ? "bg-blueprint-dark opacity-20" : "bg-blueprint-light"}`} />
+          {image && <div className="absolute inset-0 bg-navy-950/35" />}
+          <div
+            className={`absolute -right-8 -top-8 h-28 w-28 rounded-full blur-2xl transition-all duration-300 ${
+              image ? "bg-primary-600/25 group-hover:bg-primary-500/40" : "bg-primary-500/15 group-hover:bg-primary-500/25"
+            }`}
+          />
+          <span
+            className={`relative flex h-16 w-16 items-center justify-center rounded-xl border backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 ${
+              image ? "border-primary-400/25 bg-primary-500/10" : "border-primary-200 bg-white"
+            }`}
+          >
+            <Icon className={`h-8 w-8 ${image ? "text-primary-300" : "text-primary-600"}`} strokeWidth={1.75} />
           </span>
         </div>
 
