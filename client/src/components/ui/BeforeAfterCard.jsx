@@ -8,22 +8,22 @@ function BeforeAfterVisual({ Icon, tag }) {
 
   return (
     <div className="relative flex h-48 overflow-hidden">
-      <div className="relative flex w-1/2 items-center justify-center bg-slate-800">
-        <div className="absolute inset-0 bg-blueprint-dark opacity-20 grayscale" />
-        <Icon className="relative h-11 w-11 text-slate-500" strokeWidth={1.5} />
-        <span className="absolute bottom-2.5 left-2.5 rounded bg-black/40 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-300">
+      <div className="relative flex w-1/2 items-center justify-center bg-slate-100">
+        <div className="absolute inset-0 bg-blueprint-light grayscale" />
+        <Icon className="relative h-11 w-11 text-slate-400" strokeWidth={1.5} />
+        <span className="absolute bottom-2.5 left-2.5 rounded bg-white/80 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-600 shadow-sm">
           Before
         </span>
       </div>
-      <div className="relative flex w-1/2 items-center justify-center bg-navy-900">
-        <div className="absolute inset-0 bg-blueprint-dark opacity-40" />
-        <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-primary-600/30 blur-2xl" />
-        <Icon className="relative h-11 w-11 text-primary-300" strokeWidth={1.75} />
+      <div className="relative flex w-1/2 items-center justify-center bg-primary-50">
+        <div className="absolute inset-0 bg-blueprint-light" />
+        <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-primary-500/20 blur-2xl" />
+        <Icon className="relative h-11 w-11 text-primary-600" strokeWidth={1.75} />
         <span className="absolute bottom-2.5 right-2.5 rounded bg-primary-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
           After
         </span>
       </div>
-      <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-white/20" />
+      <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-slate-200" />
     </div>
   );
 }

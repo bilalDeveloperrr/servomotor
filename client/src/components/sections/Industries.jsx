@@ -5,7 +5,7 @@ import { industries } from "../../data/industries";
 
 function Industries() {
   return (
-    <section id="industries" className="bg-white py-24 sm:py-28">
+    <section id="industries" className="bg-surface py-24 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="Industries We Serve"
