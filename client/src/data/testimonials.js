@@ -4,7 +4,7 @@ export const testimonials = [
     role: "Plant Maintenance Head",
     company: "Vantage Steel Industries",
     quote:
-      "ServoTech's response time during a critical rolling-mill motor failure was exceptional. Their engineers diagnosed and rewound the motor on-site, cutting our expected downtime by more than half.",
+      "Servomates' response time during a critical rolling-mill motor failure was exceptional. Their engineers diagnosed and rewound the motor on-site, cutting our expected downtime by more than half.",
     rating: 5,
   },
   {
@@ -12,7 +12,7 @@ export const testimonials = [
     role: "Operations Manager",
     company: "Prime Textile Mills",
     quote:
-      "We've moved all our spindle and servo motor repairs to ServoTech. The precision balancing work and documented testing reports give us full confidence in every unit that comes back to the floor.",
+      "We've moved all our spindle and servo motor repairs to Servomates. The precision balancing work and documented testing reports give us full confidence in every unit that comes back to the floor.",
     rating: 5,
   },
   {

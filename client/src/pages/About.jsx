@@ -27,11 +27,11 @@ function About() {
     <>
       <Seo
         title="About Us"
-        description="20+ years of industrial motor repair expertise. Learn about ServoTech Industrial's history, mission, engineering team, and ISO certifications."
+        description="20+ years of industrial motor repair expertise. Learn about Servomates Industrial's history, mission, engineering team, and ISO certifications."
       />
 
       <PageHero
-        eyebrow="About ServoTech Industrial"
+        eyebrow="About Servomates Industrial"
         title="Two Decades of Precision Industrial Engineering"
         description="From a small motor rewinding workshop to a nationwide industrial repair partner — built on certified engineering, honest diagnostics, and a standard of workmanship that doesn't cut corners."
       />

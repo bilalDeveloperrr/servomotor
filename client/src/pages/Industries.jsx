@@ -12,7 +12,7 @@ function Industries() {
     <>
       <Seo
         title="Industries We Serve"
-        description="ServoTech Industrial supports manufacturing, automation, steel, textile, paper, pharmaceutical, food processing, power, mining, cement, packaging, and automotive sectors with repair services that reduce downtime."
+        description="Servomates Industrial supports manufacturing, automation, steel, textile, paper, pharmaceutical, food processing, power, mining, cement, packaging, and automotive sectors with repair services that reduce downtime."
       />
 
       <PageHero

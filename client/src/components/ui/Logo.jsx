@@ -17,7 +17,7 @@ function Logo({ light = false }) {
       </span>
       <span className="leading-none">
         <span className={`block font-display text-lg font-bold tracking-tight ${light ? "text-white" : "text-navy-900"}`}>
-          SERVOTECH
+          SERVOMATES
         </span>
         <span className={`block text-[10px] font-semibold uppercase tracking-[0.22em] ${light ? "text-slate-300" : "text-slate-500"}`}>
           Industrial

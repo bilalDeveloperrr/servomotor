@@ -37,7 +37,7 @@ function ContactSection({
 
             <div className="overflow-hidden rounded-lg border border-slate-200">
               <iframe
-                title="ServoTech Industrial office location"
+                title="Servomates Industrial office location"
                 src={`https://www.google.com/maps?q=${encodeURIComponent(company.address)}&output=embed`}
                 width="100%"
                 height="260"

@@ -65,7 +65,7 @@ function buildCategory(folder, label) {
     const filename = path.split("/").pop();
     return {
       src,
-      alt: captions[filename] ?? `${label} — ServoTech Industrial workshop photograph`,
+      alt: captions[filename] ?? `${label} — Servomates Industrial workshop photograph`,
       isPreferredHero: /^new_hero[_-]/i.test(filename),
       isHero: /^hero[_-]/i.test(filename),
     };

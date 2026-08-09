@@ -10,7 +10,7 @@ function Contact() {
     <>
       <Seo
         title="Contact Us"
-        description="Contact ServoTech Industrial for a repair quotation, scheduled maintenance plan, or 24/7 emergency breakdown support. Phone, WhatsApp, email, and office location."
+        description="Contact Servomates Industrial for a repair quotation, scheduled maintenance plan, or 24/7 emergency breakdown support. Phone, WhatsApp, email, and office location."
       />
 
       <PageHero

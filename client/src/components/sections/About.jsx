@@ -71,7 +71,7 @@ function About() {
           <Reveal direction="left">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary-600/20 bg-primary-50 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary-700">
               <span className="h-1.5 w-1.5 rounded-full bg-primary-500" />
-              About ServoTech Industrial
+              About Servomates Industrial
             </div>
 
             <h2 className="mt-5 text-3xl font-bold leading-[1.15] text-navy-900 sm:text-4xl lg:text-[2.6rem]">

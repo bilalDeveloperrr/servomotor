@@ -8,17 +8,17 @@ function StatItem({ value, suffix, label, isRatio, delay }) {
 
   return (
     <Reveal delay={delay} className="text-center">
-      <p ref={ref} className="font-display text-4xl font-bold text-white sm:text-5xl">
+      <p ref={ref} className="font-display text-4xl font-bold text-black/90 sm:text-5xl">
         {isRatio ? "24/7" : `${animated}${suffix}`}
       </p>
-      <p className="mt-2 text-sm font-medium uppercase tracking-[0.1em] text-primary-100">{label}</p>
+      <p className="mt-2 text-sm font-medium uppercase tracking-[0.1em] text-black/30">{label}</p>
     </Reveal>
   );
 }
 
 function Stats() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary-700 via-primary-600 to-primary-800 py-20 sm:py-24">
+    <section className="relative overflow-hidden bg-gradient-to-br bg-white bg-white bg-white py-20 sm:py-24">
       <div className="absolute inset-0 bg-blueprint-dark opacity-[0.15]" />
       <Container className="relative grid grid-cols-2 gap-y-10 sm:grid-cols-3 lg:grid-cols-5">
         {stats.map((stat, index) => (

@@ -13,8 +13,8 @@ function Home() {
   return (
     <>
       <Seo
-        title="Home"
-        description="ServoTech Industrial provides precision industrial motor repair, rewinding, preventive maintenance and 24/7 emergency breakdown services for servo motors, spindle motors, transformers and rotating equipment."
+        fullTitle="Servomates | Industrial Motor Repair & Engineering Services"
+        description="Servomates Industrial provides precision industrial motor repair, rewinding, preventive maintenance and 24/7 emergency breakdown services for servo motors, spindle motors, transformers and rotating equipment."
       />
       <Hero />
       <About />

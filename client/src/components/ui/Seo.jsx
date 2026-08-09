@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 
-const SITE_NAME = "ServoTech Industrial";
+const SITE_NAME = "Servomates Industrial";
 
-function Seo({ title, description }) {
+function Seo({ title, description, fullTitle }) {
   useEffect(() => {
-    if (title) document.title = `${title} | ${SITE_NAME}`;
+    if (fullTitle) document.title = fullTitle;
+    else if (title) document.title = `${title} | ${SITE_NAME}`;
 
     if (description) {
       let tag = document.querySelector('meta[name="description"]');

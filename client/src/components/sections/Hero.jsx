@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
-import heroForLanding from "../../assets/servo_motor/servo_07.jpg";
+import heroForLanding from "../../assets/servo_motor/servo_07.png";
 
 function Hero() {
   return (
