@@ -15,7 +15,7 @@ const captions = {
   "servo_04.webp": "Precision-rebuilt AC servo motor ready for dispatch",
   "servo_05.png": "Compact AC servo motor, front product view",
   "servo_06.jpg": "Legacy servo motor unit retained for reference and comparison",
-  "servo_07.jpg": "AC servo motor with integrated feedback connector",
+  "servo_07.png": "AC servo motor with integrated feedback connector",
   "servo_08.jpg": "Close-up of a servo motor rotor with copper winding",
 
   "Hero_motor_repairing_rewinding_02.jpg": "Engineer inspecting a freshly rewound motor stator",

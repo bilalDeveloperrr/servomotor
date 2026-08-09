@@ -12,7 +12,7 @@ function MainLayout() {
   const location = useLocation();
 
   return (
-    <div className="overflow-x-hidden bg-white">
+    <div className="bg-white">
       <ScrollToTop />
       <Navbar />
       <Breadcrumbs />

@@ -32,7 +32,7 @@ function Navbar() {
     `text-[14.5px] font-medium transition-colors ${isActive ? "text-primary-600" : "text-navy-700 hover:text-primary-600"}`;
 
   return (
-    <div id="top">
+    <>
       <div className="hidden border-b border-slate-200 bg-surface text-slate-600 lg:block">
         <div className="mx-auto flex max-w-[1280px] items-center justify-between px-10 py-2 text-xs">
           <div className="flex items-center gap-6">
@@ -224,7 +224,7 @@ function Navbar() {
           )}
         </AnimatePresence>
       </header>
-    </div>
+    </>
   );
 }
 
