@@ -56,7 +56,7 @@ function Navbar() {
       </div>
 
       <header
-        className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        className={`relative z-50 w-full transition-all duration-300 ${
           scrolled ? "border-b border-slate-200 bg-white/90 shadow-[0_4px_24px_-8px_rgba(15,23,42,0.12)] backdrop-blur-md" : "bg-white"
         }`}
       >
