@@ -29,12 +29,12 @@ function Footer() {
   const [showArabicAddress, setShowArabicAddress] = useState(false);
 
   return (
-    <footer className="bg-navy-950 text-slate-400">
+    <footer className="bg-navy-950 text-[#DCE5EF]">
       <Container className="py-16 lg:py-20">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
             <Logo />
-            <p className="mt-5 max-w-sm text-sm leading-relaxed text-slate-400">
+            <p className="mt-5 max-w-sm text-sm leading-relaxed text-[#DCE5EF]">
               A trusted industrial engineering partner delivering precision motor repair, rewinding, and
               maintenance services for over 20 years. Certified engineers, advanced diagnostics, and a
               commitment to minimal downtime for every client we serve.
@@ -45,7 +45,7 @@ function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-slate-300 transition-colors hover:border-primary-500 hover:text-primary-400"
+                  className="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-slate-300 transition-colors hover:border-primary-500 hover:text-primary-500"
                 >
                   <Icon className="h-4 w-4" strokeWidth={2} />
                 </a>
@@ -55,7 +55,7 @@ function Footer() {
 
           <FooterColumn title="Quick Links">
             {navLinks.map((link) => (
-              <Link key={link.href} to={link.href} className="text-sm text-slate-400 transition-colors hover:text-primary-400">
+              <Link key={link.href} to={link.href} className="text-sm text-[#DCE5EF] transition-colors hover:text-primary-500">
                 {link.label}
               </Link>
             ))}
@@ -66,7 +66,7 @@ function Footer() {
               <Link
                 key={service.slug}
                 to={`/services/${service.slug}`}
-                className="text-sm text-slate-400 transition-colors hover:text-primary-400"
+                className="text-sm text-[#DCE5EF] transition-colors hover:text-primary-500"
               >
                 {service.title}
               </Link>
@@ -77,12 +77,12 @@ function Footer() {
             <a
               href={company.emailHref}
               aria-label={`Email us at ${company.email}`}
-              className="flex items-start gap-3 text-sm text-slate-400 transition-colors duration-200 hover:text-blue-400 hover:underline"
+              className="flex items-start gap-3 text-sm text-[#DCE5EF] transition-colors duration-200 hover:text-primary-500 hover:underline"
             >
               <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary-500" />
               {company.email}
             </a>
-            <span className="flex items-start gap-3 text-sm text-slate-400">
+            <span className="flex items-start gap-3 text-sm text-[#DCE5EF]">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary-500" />
               <span className="flex flex-col items-start gap-1">
                 <span dir={showArabicAddress ? "rtl" : "ltr"} className={showArabicAddress ? "text-right" : ""}>
@@ -91,7 +91,7 @@ function Footer() {
                 <button
                   type="button"
                   onClick={() => setShowArabicAddress((v) => !v)}
-                  className="text-xs font-semibold text-primary-400 underline-offset-2 transition-colors duration-200 hover:text-primary-300 hover:underline"
+                  className="text-xs font-semibold text-primary-400 underline-offset-2 transition-colors duration-200 hover:text-primary-500 hover:underline"
                 >
                   {showArabicAddress ? "View in English" : "عرض بالعربية"}
                 </button>
@@ -99,7 +99,7 @@ function Footer() {
             </span>
             <Link
               to="/contact"
-              className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-400 transition-colors hover:text-primary-300"
+              className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-400 transition-colors hover:text-primary-500"
             >
               Request a Service Quote
               <ArrowUpRight className="h-4 w-4" />
@@ -122,9 +122,9 @@ function Footer() {
         <Container className="flex flex-col items-center justify-between gap-3 pb-24 pt-6 text-xs text-slate-500 sm:flex-row sm:pb-6">
           <p>&copy; {new Date().getFullYear()} {company.name}. All rights reserved.</p>
           <div className="flex items-center gap-5">
-            <a href="#" className="transition-colors hover:text-primary-400">Privacy Policy</a>
-            <a href="#" className="transition-colors hover:text-primary-400">Terms of Service</a>
-            <a href="#" className="transition-colors hover:text-primary-400">ISO Certifications</a>
+            <a href="#" className="transition-colors hover:text-primary-500">Privacy Policy</a>
+            <a href="#" className="transition-colors hover:text-primary-500">Terms of Service</a>
+            <a href="#" className="transition-colors hover:text-primary-500">ISO Certifications</a>
           </div>
         </Container>
       </div>

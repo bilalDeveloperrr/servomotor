@@ -17,7 +17,7 @@ function FeatureTile({ icon: Icon, title, description, variant = "light", delay 
 
   return (
     <Reveal delay={delay} className="h-full">
-      <div className="group h-full rounded-xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary-200 hover:shadow-[0_16px_36px_-16px_rgba(15,23,42,0.2)]">
+      <div className="group h-full rounded-xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary-500 hover:shadow-[0_16px_36px_-16px_rgba(15,23,42,0.2)]">
         <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary-50 text-primary-600 transition-colors duration-300 group-hover:bg-primary-600 group-hover:text-white">
           <Icon className="h-5 w-5" strokeWidth={2} />
         </span>

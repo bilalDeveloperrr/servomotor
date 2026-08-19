@@ -12,7 +12,7 @@ function ServiceCard({ service, index }) {
     <Reveal delay={(index % 4) * 0.08} className="h-full">
       <Link
         to={`/services/${service.slug}`}
-        className="group flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-primary-200 hover:shadow-[0_20px_45px_-18px_rgba(15,23,42,0.22)]"
+        className="group flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-primary-500 hover:shadow-[0_20px_45px_-18px_rgba(15,23,42,0.22)]"
       >
         <div
           className={`relative flex h-36 items-center justify-center overflow-hidden ${

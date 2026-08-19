@@ -106,7 +106,7 @@ function ServiceDetailTemplate({ data }) {
                   <Reveal key={industry.slug}>
                     <Link
                       to="/industries"
-                      className="group flex h-full flex-col items-center gap-3 rounded-xl border border-slate-200 bg-white px-4 py-7 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary-200 hover:shadow-[0_16px_36px_-16px_rgba(15,23,42,0.2)]"
+                      className="group flex h-full flex-col items-center gap-3 rounded-xl border border-slate-200 bg-white px-4 py-7 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary-500 hover:shadow-[0_16px_36px_-16px_rgba(15,23,42,0.2)]"
                     >
                       <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-50 text-primary-600 transition-colors duration-300 group-hover:bg-primary-600 group-hover:text-white">
                         <Icon className="h-5 w-5" strokeWidth={1.75} />

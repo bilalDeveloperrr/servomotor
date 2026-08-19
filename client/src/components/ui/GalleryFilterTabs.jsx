@@ -11,7 +11,7 @@ function GalleryFilterTabs({ categories, active, onChange }) {
             className={`rounded-full border px-4 py-2 text-sm font-semibold transition-colors duration-200 ${
               isActive
                 ? "border-primary-600 bg-primary-600 text-white"
-                : "border-slate-200 bg-white text-navy-700 hover:border-primary-200 hover:text-primary-600"
+                : "border-slate-200 bg-white text-navy-700 hover:border-primary-500 hover:text-primary-600"
             }`}
           >
             {category}

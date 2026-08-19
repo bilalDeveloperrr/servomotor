@@ -38,7 +38,7 @@ function Navbar() {
           <div className="flex items-center gap-6">
             <a
               href={company.emailHref}
-              className="flex items-center gap-1.5 transition-colors duration-200 hover:text-blue-600 hover:underline"
+              className="flex items-center gap-1.5 transition-colors duration-200 hover:text-primary-600 hover:underline"
             >
               <Mail className="h-3.5 w-3.5 text-primary-600" strokeWidth={2.25} />
               {company.email}
@@ -129,7 +129,7 @@ function Navbar() {
           </ul>
 
           <div className="hidden lg:block">
-            <Button as={Link} to="/contact" variant="" size="md">
+            <Button as={Link} to="/contact" variant="primary" size="md">
               Request Quote
             </Button>
           </div>
@@ -216,7 +216,7 @@ function Navbar() {
                 </Button>
                 <a
                   href={company.emailHref}
-                  className="flex items-center justify-center gap-2 text-sm font-semibold text-navy-800 transition-colors duration-200 hover:text-blue-600 hover:underline"
+                  className="flex items-center justify-center gap-2 text-sm font-semibold text-navy-800 transition-colors duration-200 hover:text-primary-600 hover:underline"
                 >
                   <Mail className="h-4 w-4 text-primary-600" />
                   {company.email}
