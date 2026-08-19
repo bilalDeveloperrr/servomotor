@@ -37,10 +37,10 @@ function Hero() {
             </p>
 
             <div className="mt-9 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
-              <Button as={Link} to="/contact" variant="white" size="lg">
+              <Button as={Link} to="/contact" variant="white" size="lg" className="text-primary-500">
                 Request a Service
               </Button>
-              <Button as={Link} to="/contact" variant="outlineLight" size="lg" icon={false}>
+              <Button as={Link} to="/contact" variant="outlineLight" size="lg" icon={false} className="text-primary-500">
                 Contact Our Engineers
               </Button>
             </div>

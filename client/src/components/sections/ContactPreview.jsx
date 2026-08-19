@@ -32,7 +32,7 @@ function ContactPreview() {
         </div>
 
         <Reveal className="mt-10">
-          <Button as={Link} to="/contact" variant="primary" size="lg">
+          <Button className="text-primary-700" as={Link} to="/contact" variant="white" size="lg">
             Go to Contact Page
           </Button>
         </Reveal>
