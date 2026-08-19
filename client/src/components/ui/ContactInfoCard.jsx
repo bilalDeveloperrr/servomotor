@@ -10,7 +10,7 @@ function ContactInfoCard({ icon: Icon, label, value, valueAr, href, urgent = fal
       className={`flex items-start gap-4 rounded-lg border p-4 transition-colors duration-200 ${
         urgent
           ? "border-red-200 bg-red-50 hover:border-red-300"
-          : "border-slate-200 bg-white hover:border-primary-200"
+          : "border-slate-200 bg-white hover:border-primary-500"
       }`}
     >
       <span

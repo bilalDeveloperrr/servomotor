@@ -22,8 +22,8 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary-400/25 bg-primary-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary-200 backdrop-blur-sm">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary-400" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#DCE5EF] bg-surface px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary-600 backdrop-blur-sm">
+              <span className="h-1.5 w-1.5 rounded-full bg-primary-500" />
               Industrial Engineering &amp; Repair Specialists
             </div>
 
@@ -37,10 +37,10 @@ function Hero() {
             </p>
 
             <div className="mt-9 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
-              <Button as={Link} to="/contact" variant="white" size="lg" className="text-primary-500">
+              <Button as={Link} to="/contact" variant="white" size="lg">
                 Request a Service
               </Button>
-              <Button as={Link} to="/contact" variant="outlineLight" size="lg" icon={false} className="text-primary-500">
+              <Button as={Link} to="/contact" variant="outlineLight" size="lg" icon={false}>
                 Contact Our Engineers
               </Button>
             </div>

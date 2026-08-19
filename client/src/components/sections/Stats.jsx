@@ -8,10 +8,10 @@ function StatItem({ value, suffix, label, isRatio, delay }) {
 
   return (
     <Reveal delay={delay} className="text-center">
-      <p ref={ref} className="font-display text-4xl font-bold text-black/90 sm:text-5xl">
+      <p ref={ref} className="font-display text-4xl font-bold text-navy-900 sm:text-5xl">
         {isRatio ? "24/7" : `${animated}${suffix}`}
       </p>
-      <p className="mt-2 text-sm font-medium uppercase tracking-[0.1em] text-black/30">{label}</p>
+      <p className="mt-2 text-sm font-medium uppercase tracking-[0.1em] text-slate-500">{label}</p>
     </Reveal>
   );
 }
