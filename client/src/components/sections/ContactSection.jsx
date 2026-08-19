@@ -3,7 +3,6 @@ import Container from "../ui/Container";
 import SectionHeading from "../ui/SectionHeading";
 import Reveal from "../ui/Reveal";
 import ContactInfoCard from "../ui/ContactInfoCard";
-import ContactForm from "../ui/ContactForm";
 import { company } from "../../data/company";
 
 const contactDetails = [
@@ -16,7 +15,6 @@ function ContactSection({
   eyebrow = "Get In Touch",
   title = "Request Expert Industrial Support",
   description = "Reach our engineering team for a repair quotation, scheduled maintenance plan, or immediate emergency breakdown assistance.",
-  defaultService = "",
   className = "bg-white",
 }) {
   return (
@@ -24,8 +22,8 @@ function ContactSection({
       <Container>
         <SectionHeading eyebrow={eyebrow} title={title} description={description} />
 
-        <div className="mt-14 grid grid-cols-1 gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-8">
-          <Reveal direction="right" className="flex flex-col gap-6">
+        <div className="mx-auto mt-14 max-w-2xl">
+          <Reveal className="flex flex-col gap-6">
             <div className="grid grid-cols-1 gap-3">
               {contactDetails.map((detail) => (
                 <ContactInfoCard key={detail.label} {...detail} />
@@ -44,10 +42,6 @@ function ContactSection({
                 className="grayscale-[15%]"
               />
             </div>
-          </Reveal>
-
-          <Reveal direction="left">
-            <ContactForm defaultService={defaultService} />
           </Reveal>
         </div>
       </Container>
