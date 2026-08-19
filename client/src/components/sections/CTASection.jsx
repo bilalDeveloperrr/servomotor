@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, PhoneCall } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import Container from "../ui/Container";
 import Reveal from "../ui/Reveal";
 import { company } from "../../data/company";
@@ -9,7 +9,7 @@ function CTASection({
   description = "Talk to our engineering team for a repair quotation, scheduled maintenance plan, or immediate emergency breakdown assistance.",
   primaryLabel = "Request Service",
   primaryHref = "/contact",
-  secondaryLabel = "Call Emergency Line",
+  secondaryLabel = "Email Our Team",
 }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br bg-white bg-white bg-white py-20 sm:py-24">
@@ -27,10 +27,10 @@ function CTASection({
               <ArrowRight className="h-4 w-4 transition-transform duration-200  group-hover:translate-x-0.5" />
             </Link>
             <a
-              href={company.emergencyPhoneHref}
+              href={company.emailHref}
               className="inline-flex items-center justify-center gap-2 rounded-md border border-black/30 px-7 py-3.5 text-[15px] font-semibold text-black transition-colors hover:bg-black/10"
             >
-              <PhoneCall className="h-4 w-4" />
+              <Mail className="h-4 w-4" />
               {secondaryLabel}
             </a>
           </div>

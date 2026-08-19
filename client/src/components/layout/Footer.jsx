@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { Mail, MapPin, ArrowUpRight } from "lucide-react";
 import Logo from "../ui/Logo";
 import Container from "../ui/Container";
 import { LinkedinIcon, FacebookIcon, TwitterIcon, YoutubeIcon } from "../ui/SocialIcons";
@@ -25,12 +26,14 @@ function FooterColumn({ title, children }) {
 }
 
 function Footer() {
+  const [showArabicAddress, setShowArabicAddress] = useState(false);
+
   return (
     <footer className="bg-navy-950 text-slate-400">
       <Container className="py-16 lg:py-20">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
-            <Logo light />
+            <Logo />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-slate-400">
               A trusted industrial engineering partner delivering precision motor repair, rewinding, and
               maintenance services for over 20 years. Certified engineers, advanced diagnostics, and a
@@ -71,17 +74,28 @@ function Footer() {
           </FooterColumn>
 
           <FooterColumn title="Contact">
-            <a href={company.phoneHref} className="flex items-start gap-3 text-sm text-slate-400 transition-colors hover:text-primary-400">
-              <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary-500" />
-              {company.phone}
-            </a>
-            <a href={company.emailHref} className="flex items-start gap-3 text-sm text-slate-400 transition-colors hover:text-primary-400">
+            <a
+              href={company.emailHref}
+              aria-label={`Email us at ${company.email}`}
+              className="flex items-start gap-3 text-sm text-slate-400 transition-colors duration-200 hover:text-blue-400 hover:underline"
+            >
               <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary-500" />
               {company.email}
             </a>
             <span className="flex items-start gap-3 text-sm text-slate-400">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary-500" />
-              {company.address}
+              <span className="flex flex-col items-start gap-1">
+                <span dir={showArabicAddress ? "rtl" : "ltr"} className={showArabicAddress ? "text-right" : ""}>
+                  {showArabicAddress ? company.addressAr : company.address}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setShowArabicAddress((v) => !v)}
+                  className="text-xs font-semibold text-primary-400 underline-offset-2 transition-colors duration-200 hover:text-primary-300 hover:underline"
+                >
+                  {showArabicAddress ? "View in English" : "عرض بالعربية"}
+                </button>
+              </span>
             </span>
             <Link
               to="/contact"

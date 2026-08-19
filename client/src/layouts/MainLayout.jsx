@@ -3,7 +3,6 @@ import { Outlet, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
-import EmergencyButton from "../components/layout/EmergencyButton";
 import Breadcrumbs from "../components/layout/Breadcrumbs";
 import ScrollToTop from "../components/layout/ScrollToTop";
 import PageLoader from "../components/ui/PageLoader";
@@ -32,7 +31,6 @@ function MainLayout() {
         </AnimatePresence>
       </main>
       <Footer />
-      <EmergencyButton />
     </div>
   );
 }
