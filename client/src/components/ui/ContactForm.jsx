@@ -4,7 +4,7 @@ import { Send, CheckCircle2 } from "lucide-react";
 import { services } from "../../data/services";
 
 function ContactForm({ defaultService = "", className = "" }) {
-  const initialForm = { name: "", email: "", phone: "", company: "", service: defaultService, message: "" };
+  const initialForm = { name: "", email: "", company: "", service: defaultService, message: "" };
   const [form, setForm] = useState(initialForm);
   const [submitted, setSubmitted] = useState(false);
 
@@ -49,22 +49,6 @@ function ContactForm({ defaultService = "", className = "" }) {
         </div>
 
         <div>
-          <label htmlFor="phone" className="mb-1.5 block text-sm font-semibold text-navy-900">
-            Phone Number
-          </label>
-          <input
-            id="phone"
-            name="phone"
-            type="tel"
-            required
-            value={form.phone}
-            onChange={handleChange}
-            placeholder="+1 (800) 555-0100"
-            className="w-full rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm text-navy-900 outline-none transition-colors focus:border-primary-500 focus:ring-2 focus:ring-primary-100"
-          />
-        </div>
-
-        <div>
           <label htmlFor="email" className="mb-1.5 block text-sm font-semibold text-navy-900">
             Email Address
           </label>
@@ -80,7 +64,7 @@ function ContactForm({ defaultService = "", className = "" }) {
           />
         </div>
 
-        <div>
+        <div className="sm:col-span-2">
           <label htmlFor="company" className="mb-1.5 block text-sm font-semibold text-navy-900">
             Company Name
           </label>

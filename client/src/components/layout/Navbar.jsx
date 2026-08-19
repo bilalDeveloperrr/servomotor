@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X, Phone, Mail, Clock, ChevronRight, ChevronDown, ArrowRight } from "lucide-react";
+import { Menu, X, Mail, Clock, ChevronRight, ChevronDown, ArrowRight } from "lucide-react";
 import Logo from "../ui/Logo";
 import Button from "../ui/Button";
 import { navLinks } from "../../data/nav";
@@ -36,14 +36,13 @@ function Navbar() {
       <div className="hidden border-b border-slate-200 bg-surface text-slate-600 lg:block">
         <div className="mx-auto flex max-w-[1280px] items-center justify-between px-10 py-2 text-xs">
           <div className="flex items-center gap-6">
-            <span className="flex items-center gap-1.5">
-              <Phone className="h-3.5 w-3.5 text-primary-600" strokeWidth={2.25} />
-              {company.phone}
-            </span>
-            <span className="flex items-center gap-1.5">
+            <a
+              href={company.emailHref}
+              className="flex items-center gap-1.5 transition-colors duration-200 hover:text-blue-600 hover:underline"
+            >
               <Mail className="h-3.5 w-3.5 text-primary-600" strokeWidth={2.25} />
               {company.email}
-            </span>
+            </a>
             <span className="flex items-center gap-1.5">
               <Clock className="h-3.5 w-3.5 text-primary-600" strokeWidth={2.25} />
               {company.hours}
@@ -130,7 +129,7 @@ function Navbar() {
           </ul>
 
           <div className="hidden lg:block">
-            <Button as={Link} to="/contact" variant="primary" size="md">
+            <Button as={Link} to="/contact" variant="" size="md">
               Request Quote
             </Button>
           </div>
@@ -215,9 +214,12 @@ function Navbar() {
                 <Button as={Link} to="/contact" variant="primary" onClick={() => setMenuOpen(false)}>
                   Request Quote
                 </Button>
-                <a href={company.phoneHref} className="flex items-center justify-center gap-2 text-sm font-semibold text-navy-800">
-                  <Phone className="h-4 w-4 text-primary-600" />
-                  {company.phone}
+                <a
+                  href={company.emailHref}
+                  className="flex items-center justify-center gap-2 text-sm font-semibold text-navy-800 transition-colors duration-200 hover:text-blue-600 hover:underline"
+                >
+                  <Mail className="h-4 w-4 text-primary-600" />
+                  {company.email}
                 </a>
               </div>
             </motion.div>

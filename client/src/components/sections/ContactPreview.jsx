@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, Clock, Siren } from "lucide-react";
+import { Mail, Clock } from "lucide-react";
 import Container from "../ui/Container";
 import SectionHeading from "../ui/SectionHeading";
 import Reveal from "../ui/Reveal";
@@ -8,10 +8,8 @@ import ContactInfoCard from "../ui/ContactInfoCard";
 import { company } from "../../data/company";
 
 const quickDetails = [
-  { icon: Phone, label: "Phone", value: company.phone, href: company.phoneHref },
   { icon: Mail, label: "Email", value: company.email, href: company.emailHref },
   { icon: Clock, label: "Business Hours", value: company.hours },
-  { icon: Siren, label: "Emergency Hotline", value: company.emergencyPhone, href: company.emergencyPhoneHref, urgent: true },
 ];
 
 function ContactPreview() {

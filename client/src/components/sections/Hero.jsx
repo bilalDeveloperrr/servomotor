@@ -6,14 +6,12 @@ import heroForLanding from "../../assets/servo_motor/servo_07.png";
 
 function Hero() {
   return (
-    <section
-      className="relative flex min-h-[560px] items-center overflow-hidden pb-44 pt-28 sm:min-h-[600px] sm:pb-32 sm:pt-32 lg:min-h-[650px] lg:pb-40"
-      style={{
-        backgroundImage: `url(${heroForLanding})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <section className="relative flex min-h-[560px] items-center overflow-hidden pb-44 pt-28 sm:min-h-[600px] sm:pb-32 sm:pt-32 lg:min-h-[650px] lg:pb-40">
+      <img
+        src={heroForLanding}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover"
+      />
       <div className="absolute inset-0 bg-gradient-to-r from-navy-950/75 via-navy-950/45 to-navy-950/20" />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-950/60 via-transparent to-navy-950/10" />
 
@@ -39,7 +37,7 @@ function Hero() {
             </p>
 
             <div className="mt-9 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
-              <Button as={Link} to="/contact" variant="primary" size="lg">
+              <Button as={Link} to="/contact" variant="white" size="lg">
                 Request a Service
               </Button>
               <Button as={Link} to="/contact" variant="outlineLight" size="lg" icon={false}>
